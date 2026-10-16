@@ -1,0 +1,154 @@
+.topbar {
+  background:var(--teal);
+  color:#fff;
+  font-size:.82rem;
+  padding:6px 0;
+  text-align:center;
+}
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(14px);
+  box-shadow:0 4px 20px rgba(23,21,94,.1);
+}
+
+nav .wrap {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:72px;
+  gap:14px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.logo {
+  font-family:'Baloo 2', Inter, Arial, sans-serif;
+  font-weight:800;
+  font-size:1.3rem;
+  color:var(--red);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.logo-img {
+  width:64px;
+  height:64px;
+  flex-shrink:0;
+}
+
+/* left site URL removed; keep styles minimal */
+
+.logo span {
+  color:var(--orange);
+}
+
+.logo .subtitle {
+  font-size:0.85rem;
+  font-weight:600;
+  color:#444;
+  margin-left:6px;
+}
+
+.left-brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-round {
+  width:64px;
+  height:64px;
+  display:block;
+}
+
+/* site-url-left removed */
+
+.links {
+  display:flex;
+  gap:26px;
+  font-weight:600;
+  font-size:.95rem;
+  align-items:center;
+}
+
+.links a:hover {
+  color:var(--orange);
+}
+
+.links a {
+  color:var(--deep-dark, #222);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+}
+
+.links a:hover {
+  background:linear-gradient(90deg, rgba(255,200,120,0.08), rgba(255,100,100,0.04));
+}
+
+.lang {
+  display:inline-flex;
+  background:linear-gradient(90deg,var(--orange),var(--red));
+  border-radius:999px;
+  padding:3px;
+  border:0;
+  cursor:pointer;
+  font:inherit;
+  box-shadow:0 4px 14px rgba(120,45,200,0.06);
+}
+
+.lang span {
+  padding:5px 13px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:700;
+  color:#cfd0ff;
+  transition:.25s;
+}
+
+.lang span.on {
+  background:linear-gradient(135deg,var(--orange),var(--red));
+  color:#fff;
+}
+
+.menu {
+  display:none;
+  background:none;
+  border:0;
+  font-size:1.6rem;
+  cursor:pointer;
+}
+
+@media(max-width:900px) {
+  .menu {
+    display:block;
+  }
+  .links {
+    display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    right:0;
+    background:#fff;
+    flex-direction:column;
+    padding:18px 20px;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .links.open {
+    display:flex;
+  }
+  .logo {
+    font-size:1.05rem;
+  }
+  .logo-img { display:none; }
+  .site-url { display:none; }
+}

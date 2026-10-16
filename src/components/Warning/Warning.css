@@ -1,0 +1,15 @@
+.warn {
+  background:#fff;
+  border-radius:22px;
+  padding:30px;
+  border:3px dashed var(--red);
+}
+
+.warn h2 {
+  color:var(--red);
+  margin-bottom:10px;
+}
+
+.warn li {
+  margin:8px 0 8px 22px;
+}

@@ -1,0 +1,105 @@
+.team {
+  display:grid;
+  gap:18px;
+  align-items:start;
+  /* responsive columns: 1 / 2 / 3 / 5 */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media(min-width:520px) {
+  .team { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(min-width:880px) {
+  .team { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media(min-width:1200px) {
+  .team { grid-template-columns: repeat(5, 1fr); }
+}
+
+.mem {
+  background:#fff;
+  border-radius:18px;
+  padding:20px 16px;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.06);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+
+.mem:hover {
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(16,24,64,0.18);
+}
+
+.av {
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  margin:0 auto 12px;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  background:#f0f4ff;
+  box-shadow:0 0 0 4px #fff,0 0 0 8px var(--c),0 10px 22px rgba(0,0,0,.12);
+  transition:transform .22s ease;
+}
+
+.mem:hover .av { transform:scale(1.03); }
+
+.mem.head .av {
+  width:140px;
+  height:140px;
+}
+
+.mem.head {
+  grid-column: span 2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:linear-gradient(135deg,var(--navy),var(--deep));
+  color:#fff;
+  padding:28px;
+}
+
+@media(max-width:520px) {
+  .mem.head { grid-column:auto; }
+}
+.mem small {
+  opacity:.8;
+}
+
+.role {
+  margin-top:6px;
+  color:var(--orange);
+  font-weight:700;
+  font-size:0.95rem;
+}
+
+/* hide the duplicated small label inside the director (head) card so only the orange role label shows */
+.mem.head small { display: none; }
+
+.qual {
+  display:block;
+  margin-top:6px;
+  color:#666;
+  font-size:0.82rem;
+}
+
+.chip {
+  display:inline-block;
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:0.85rem;
+}
+
+.head-av { box-shadow:0 0 0 6px #fff,0 0 0 12px rgba(255,255,255,0.06); }
+
+@media(prefers-reduced-motion:reduce) {
+  .mem {
+    transition:none;
+  }
+}

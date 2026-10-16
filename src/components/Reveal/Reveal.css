@@ -1,0 +1,18 @@
+.rv {
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s,transform .7s;
+}
+
+.rv.in {
+  opacity:1;
+  transform:none;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .rv {
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+}

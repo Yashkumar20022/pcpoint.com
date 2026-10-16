@@ -1,0 +1,29 @@
+.marq {
+  background:var(--orange);
+  color:#fff;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:12px 0;
+  font-family:'Baloo 2';
+  font-weight:700;
+}
+
+.marq div {
+  display:inline-block;
+  animation:mq 38s linear infinite;
+}
+
+.marq span {
+  margin:0 26px;
+}
+
+@keyframes mq {
+  to {
+    transform:translateX(-50%);
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .marq div {
+    animation:none;
+  }
+}

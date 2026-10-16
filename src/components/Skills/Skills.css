@@ -1,0 +1,32 @@
+.band {
+  background:linear-gradient(135deg,var(--deep),var(--navy));
+  color:#fff;
+}
+
+.band .h2 {
+  color:#fff;
+}
+
+.band .sub {
+  color:#d8d9ff;
+}
+
+.pills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.pills span {
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px 18px;
+  border-radius:999px;
+  transition:.25s;
+}
+
+.pills span:hover {
+  background:var(--orange);
+  border-color:var(--orange);
+  transform:scale(1.06);
+}

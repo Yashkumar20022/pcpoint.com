@@ -1,0 +1,15 @@
+node_modules/
+dist/
+
+# IDE / editor
+.vs/
+.vscode/
+
+# Environment
+.env
+
+# macOS
+.DS_Store
+
+# VS index files
+*.vsidx
